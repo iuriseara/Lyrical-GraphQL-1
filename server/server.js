@@ -4,11 +4,15 @@ const expressGraphQL = require('express-graphql');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const schema = require('./schema/schema');
+require('dotenv').config({path: '../.env'})
+
+
 
 const app = express();
+const port = process.env.PORT
 
 // Replace with your mongoLab URI
-const MONGO_URI = 'mongodb+srv://iuri:iuri@cluster0.eseck.mongodb.net/Data?retryWrites=true&w=majority';
+const MONGO_URI = port;
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
