@@ -17,8 +17,8 @@ const Root = () => {
               <IndexRoute component={SongList}/>
           </Route>
 
-          <Route path="/song/new" component={SongCreate}>
-        
+          <Route path="/songs/new" component={SongCreate}>
+
           </Route>
         </Router>
     </ApolloProvider>
